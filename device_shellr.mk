@@ -23,7 +23,10 @@ $(call inherit-product, device/lenovo/msm8226-common/msm8226.mk)
 LOCAL_PATH := device/lenovo/shellr
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/vold.fstab:system/etc/vold.fstab
+    $(LOCAL_PATH)/vold.fstab:system/etc/vold.fstab \
+    $(LOCAL_PATH)/files/system/etc/hcidump.sh:system/etc/hcidump.sh \
+    $(LOCAL_PATH)/files/system/etc/init.nxp.nfc.sh:system/etc/init.nxp.nfc.sh \
+    $(LOCAL_PATH)/files/system/etc/init.lenovo.wifi.sh:system/etc/init.lenovo.wifi.sh
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.sys.timezone=Europe/Moscow \
